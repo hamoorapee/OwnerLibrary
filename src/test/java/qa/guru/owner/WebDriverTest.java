@@ -18,10 +18,8 @@ public class WebDriverTest {
 
     @Test
     public void testGithub() {
-        //тело выполнения теста
         String title = driver.getTitle();
         assertEquals("GitHub: Let`s build from here · GitHub", title);
-        driver.quit();
     }
 
     @AfterEach
