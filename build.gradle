@@ -1,5 +1,5 @@
 plugins {
-    id 'java-library'
+    id 'java'
 }
 
 repositories {
@@ -8,14 +8,14 @@ repositories {
 
 dependencies {
     testImplementation'org.junit.jupiter:junit-jupiter:5.10.2',
-            'com.codeborne:selenide:7.2.3', 'org.slf4j:slf4j-simple:2.0.13'
+            'org.slf4j:slf4j-simple:2.0.13', 'org.seleniumhq.selenium:selenium-java:4.20.0',
+           'io.github.bonigarcia:webdrivermanager:5.8.0'// 'org.aeonbits.owner:owner:1.0.4',
+           // 'org.assertj:assertj-core:3.25.3'
 
-
+testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.10.2')
 }
 
 test{
     useJUnitPlatform()
-}
-tasks.withType(JavaCompile){
-    options.encoding = 'UTF-8'
+    //systemProperties(System.getProperties())
 }
