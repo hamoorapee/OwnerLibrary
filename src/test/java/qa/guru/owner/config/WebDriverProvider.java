@@ -35,9 +35,6 @@ public class WebDriverProvider implements Supplier<WebDriver> {
             default:
                 throw new RuntimeException("No such driver");
         }
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        return driver;
     }
 
 }

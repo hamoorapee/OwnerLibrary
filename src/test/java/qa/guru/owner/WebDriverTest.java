@@ -18,8 +18,6 @@ public class WebDriverTest {
 
     @Test
     public void testGithub() {
-        //Подготовка драйвера
-        WebDriver driver = getDriver();
         //тело выполнения теста
         String title = driver.getTitle();
         assertEquals("GitHub: Let`s build from here · GitHub", title);
